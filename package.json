@@ -1,0 +1,27 @@
+{
+  "name": "shipengine",
+  "version": "1.0.0",
+  "description": "Node module for ShipEngine (ShipStation) API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AustinBratcher/shipengine-js.git"
+  },
+  "keywords": [
+    "shipstation",
+    "shipengine",
+    "shipping",
+    "retail",
+    "api",
+    "node"
+  ],
+  "author": "Austin Bratcher <dev@austinbratcher.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AustinBratcher/shipengine-js/issues"
+  },
+  "homepage": "https://github.com/AustinBratcher/shipengine-js#readme"
+}
