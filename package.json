@@ -1,6 +1,6 @@
 {
   "name": "shipengine",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Node module for ShipEngine (ShipStation) API",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/AustinBratcher/shipengine-js/issues"
   },
-  "homepage": "https://github.com/AustinBratcher/shipengine-js#readme"
+  "homepage": "https://github.com/AustinBratcher/shipengine-js#readme",
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
+  }
 }

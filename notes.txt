@@ -1,0 +1,3 @@
+Making an node module: 
+https://darrenderidder.github.io/talks/ModulePatterns/#/10
+
