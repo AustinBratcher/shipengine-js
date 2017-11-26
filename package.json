@@ -1,6 +1,6 @@
 {
   "name": "shipengine",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Node module for ShipEngine (ShipStation) API",
   "main": "index.js",
   "scripts": {
