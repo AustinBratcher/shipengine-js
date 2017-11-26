@@ -1,11 +1,15 @@
-var ShipEngine = require('./shipengine');
-var Shipment = require('./Shipment'); 
-var Carrier = require('./carrier');
-var Package = require('./package'); 
+var ShipEngine = require('./lib/shipengine');
+var Shipment = require('./lib/shipment'); 
+var Carrier = require('./lib/carrier');
+var Package = require('./lib/package'); 
+var Address = require('./lib/address'); 
+var Label = require('./lib/label'); 
 
 module.exports = {
     'ShipEngine': ShipEngine, 
     'Shipment': Shipment,
     'Carrier': Carrier,
-    'Package': Package
+    'Package': Package, 
+    'Address': Address, 
+    'Label': Label
 } 

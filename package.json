@@ -1,6 +1,6 @@
 {
   "name": "shipengine",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Node module for ShipEngine (ShipStation) API",
   "main": "index.js",
   "scripts": {
@@ -27,5 +27,12 @@
   "dependencies": {
     "request": "^2.83.0",
     "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-requirejs": "^1.1.0"
   }
 }
