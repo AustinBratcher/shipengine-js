@@ -176,7 +176,7 @@ engine.createLabel(shipment, "pdf").then((data) => {
 
 # Report Issues
 
-Please report any issues, bugs, or feature requests on the GitHub issues page. https://github.com/AustinBratcher/shipengine-tracking-alexa-skill/issues
+Please report any issues, bugs, or feature requests on the GitHub issues page. https://github.com/AustinBratcher/shipengine-js/issues
 
 ## License
 
