@@ -1,9 +1,19 @@
 # shipengine [![NPM version](https://badge.fury.io/js/shipengine.svg)](https://npmjs.org/package/shipengine)
 
-> Node module for ShipEngine API from ShipStation. 
-Available classes include: ShipEngine, Shipment, Package, Address, Label, and Carrier.
+![ShipEngine TM](https://files.readme.io/f573044-small-ShipEngine-Logo.png)
 
-Each function call in from a ShipEngine object returns a javascript promise with the data returned from the ShipEngine API call. 
+> An unnofficial node module for ShipEngine API from ShipStation. 
+
+An unnofficial node module packaging the ShipEngine API into simple function calls. Each function call returns a native javascript promise wrapped around the data returned from the ShipEngine API call. 
+
+All function calls are mode from the ShipEngine class. Other classes, which are helpful for creating objects to work with and using predefined constants include: 
+* Address
+* Batch
+* Carrier  
+* Label
+* Package
+* Shipment
+
 
 Read more about the ShipEngine API (and values returned from function calls) here: https://docs.shipengine.com/docs/
 
@@ -16,7 +26,10 @@ $ npm install --save shipengine
 
 ## Usage
 
-Create a ShipEngine object to make API calls. 
+Before using the module, be sure you have created a ShipEngine API key. You can manage your API keys here: https://app.shipengine.com/#/portal/apimanagement. 
+
+To use the module, simply areate a ShipEngine object to make API calls. Available functions match what is listed in the ShipEngine API docs.
+
 ```js
 var ShipEngine = require('shipengine');
 var engine = new ShipEngine.ShipEngine('your_api_key_here'); 
