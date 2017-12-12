@@ -1,6 +1,8 @@
 # shipengine [![NPM version](https://badge.fury.io/js/shipengine.svg)](https://npmjs.org/package/shipengine)
 
-![ShipEngine TM](https://files.readme.io/f573044-small-ShipEngine-Logo.png)
+<span style="background-color:black">
+    <img src="https://files.readme.io/f573044-small-ShipEngine-Logo.png">
+</span>
 
 > An unnofficial node module for ShipEngine API from ShipStation. 
 
