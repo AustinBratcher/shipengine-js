@@ -1,3 +1,44 @@
 Making an node module: 
 https://darrenderidder.github.io/talks/ModulePatterns/#/10
 
+Break into Modules 
+
+add unit tests
+https://jasmine.github.io/2.0/node.html
+
+Add JS linter
+https://eslint.org/
+
+Add transpiler (Babel)
+https://babeljs.io/ 
+
+Add build tool (gulp)
+https://github.com/gulpjs/gulp
+https://www.npmjs.com/package/gulp-eslint
+https://github.com/babel/gulp-babel
+https://www.npmjs.com/package/gulp-jasmine
+
+Adding error handling to promises
+(should catch the error to log it, then pass it on to the using client)
+
+Add constraints to match ShipEngine constraints
+https://docs.shipengine.com/docs
+
+
+Dealing with HTTP status codes
+https://github.com/prettymuchbryce/node-http-status
+
+
+Add logging
+https://github.com/winstonjs/winston
+
+
+Make version of objects that Extend promises
+https://github.com/shipstation/shipengine-csharp
+https://blog.domenic.me/youre-missing-the-point-of-promises/
+http://www.html5rocks.com/en/tutorials/es6/promises/
+https://www.twilio.com/blog/2015/10/asyncawait-the-hero-javascript-deserved.html
+https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Iterators_and_Generators
+
+Create an "Observable" version
+

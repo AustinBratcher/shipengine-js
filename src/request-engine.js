@@ -1,15 +1,17 @@
 var request = require('request-promise-native'); 
 
 
-class RequestShipEngine {
+class RequestEngine {
 
-    constructor(api_key) {
-        this.api_key = api_key;
+    constructor(api_key = null) {
+        this.api_key = api_key ? api_key : process.env.SHIPENGINE_API_KEY; 
+        this.dev_mode = process.env.SHIPENGINE_DEV_MODE; 
+        
         this.base_url = 'https://api.shipengine.com/v1/';
         this.request = request; 
     }
 
-    generateOptions(path, method = RequestShipEngine.HTTPS_METHODS.GET, params = {}, body = null) {
+    generateOptions(path, method = RequestEngine.HTTPS_METHODS.GET, params = {}, body = null) {
         let options = {
             method: method,
             uri: `${this.base_url}${path}`, 
@@ -35,7 +37,7 @@ class RequestShipEngine {
 
 }
 
-RequestShipEngine.HTTPS_METHODS = {
+RequestEngine.HTTPS_METHODS = {
     GET : 'GET',
     POST : 'POST', 
     PUT : 'PUT',
@@ -44,4 +46,4 @@ RequestShipEngine.HTTPS_METHODS = {
 }
 
 
-module.exports = RequestShipEngine;
+module.exports = RequestEngine;

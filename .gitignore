@@ -57,4 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Built distribution 
+dist/
 
+#MacOS files
+.DS_Store
