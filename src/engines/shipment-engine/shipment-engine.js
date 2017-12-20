@@ -1,8 +1,8 @@
-const RequestEngine = require('../request-engine'); 
+const RequestEngine = require('../../request-engine'); 
 
 // Models
-const Address = require('../models/address');
-const Shipment = require('../models/shipment'); 
+const Address = require('../../models/address');
+const Shipment = require('../../models/shipment'); 
  
 
 class ShipmentFunctions extends RequestEngine {

@@ -1,7 +1,7 @@
-const RequestEngine = require('../request-engine'); 
+const RequestEngine = require('../../request-engine'); 
 
 // Models
-const Label = require('../models/label'); 
+const Label = require('../../models/label'); 
 
 class BatchFunctions extends RequestEngine {
 

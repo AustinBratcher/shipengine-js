@@ -1,7 +1,7 @@
-const RequestEngine = require('../request-engine'); 
+const RequestEngine = require('../../request-engine'); 
 
 // Models
-const Address = require('../models/address'); 
+const Address = require('../../models/address'); 
 
 class AddressFunctions extends RequestEngine {
 

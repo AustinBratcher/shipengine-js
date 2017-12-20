@@ -5,7 +5,12 @@ class RequestEngine {
 
     constructor(api_key = null) {
         this.api_key = api_key ? api_key : process.env.SHIPENGINE_API_KEY; 
-        this.dev_mode = process.env.SHIPENGINE_DEV_MODE; 
+        this.dev_mode = false; 
+        
+        if(process.env.SHIPENGINE_DEV_MODE && process.env.SHIPENGINE_DEV_MODE == 'true') {
+            this.dev_mode = true; 
+        }
+      
         
         this.base_url = 'https://api.shipengine.com/v1/';
         this.request = request; 

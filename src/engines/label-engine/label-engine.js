@@ -1,8 +1,8 @@
-const RequestEngine = require('../request-engine'); 
+const RequestEngine = require('../../request-engine'); 
 
 // Models
-const Address = require('../models/address'); 
-const Label = require('../models/label'); 
+const Address = require('../../models/address'); 
+const Label = require('../../models/label'); 
 
 
 class LabelFunctions extends RequestEngine{

@@ -1,7 +1,7 @@
-const RequestEngine = require('../request-engine'); 
+const RequestEngine = require('../../request-engine'); 
 
 // Models
-const Shipment = require('../models/shipment'); 
+const Shipment = require('../../models/shipment'); 
 
 class CarrierFunctions extends RequestEngine {
     
