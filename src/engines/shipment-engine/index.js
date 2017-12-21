@@ -1,2 +1,5 @@
-const ShipmentEngine = require('./shipment-engine'); 
-module.exports = ShipmentEngine; 
+import { ShipmentEngine } from './shipment-engine'; 
+
+export {
+    ShipmentEngine
+}; 

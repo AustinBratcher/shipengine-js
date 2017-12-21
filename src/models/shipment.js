@@ -1,4 +1,4 @@
-const Address = require('./address');
+import { Address } from './address'; 
 
 
 class Shipment {
@@ -76,4 +76,6 @@ Shipment.STATUS_OPTIONS = {
   CANCELLED: 'cancelled',
 };
 
-module.exports = Shipment;
+export {
+  Shipment
+};

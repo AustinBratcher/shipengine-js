@@ -1,9 +1,9 @@
-const RequestEngine = require('../../request-engine'); 
+import { RequestEngine } from '../../request-engine'; 
 
-// Models
-const Shipment = require('../../models/shipment'); 
+// Models 
+import { Shipment } from '../../models/shipment'; 
 
-class CarrierFunctions extends RequestEngine {
+class CarrierEngine extends RequestEngine {
     
     constructor(api_key = null) {
         super(api_key); 
@@ -101,4 +101,6 @@ class CarrierFunctions extends RequestEngine {
     }
 }
 
-module.exports = CarrierFunctions; 
+export {
+    CarrierEngine
+}; 

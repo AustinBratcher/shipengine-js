@@ -1,2 +1,5 @@
-const WarehouseEngine = require('./warehouse-engine'); 
-module.exports = WarehouseEngine; 
+import { WarehouseEngine } from './warehouse-engine'; 
+
+export {
+    WarehouseEngine
+}

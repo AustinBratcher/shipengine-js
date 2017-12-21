@@ -1,17 +1,26 @@
-const Models = require('./models');
-const Engines = require('./engines');
+import { 
+  AddressEngine,
+  BatchEngine, 
+  CarrierEngine, 
+  InsuranceEngine, 
+  LabelEngine, 
+  ShipmentEngine, 
+  TrackingEngine, 
+  WarehouseEngine 
+} from './engines'; 
 
+import { Label } from './models'; 
 
 class ShipEngine {
   constructor(api_key = null) {
-    this.addressEngine = new Engines.AddressEngine(api_key);
-    this.batchEngine = new Engines.BatchEngine(api_key);
-    this.carrierEngine = new Engines.CarrierEngine(api_key);
-    this.insuranceEngine = new Engines.InsuranceEngine(api_key);
-    this.labelEngine = new Engines.LabelEngine(api_key);
-    this.shipmentEngine = new Engines.ShipmentEngine(api_key);
-    this.trackingEngine = new Engines.TrackingEngine(api_key);
-    this.warehouseEngine = new Engines.WarehouseEngine(api_key);
+    this.addressEngine = new AddressEngine(api_key);
+    this.batchEngine = new BatchEngine(api_key);
+    this.carrierEngine = new CarrierEngine(api_key);
+    this.insuranceEngine = new InsuranceEngine(api_key);
+    this.labelEngine = new LabelEngine(api_key);
+    this.shipmentEngine = new ShipmentEngine(api_key);
+    this.trackingEngine = new TrackingEngine(api_key);
+    this.warehouseEngine = new WarehouseEngine(api_key);
   }
 
   /** *********************** Addresses ************************ */
@@ -315,7 +324,7 @@ class ShipEngine {
      * @returns {Promise} - JS Promised wrapped around an object with an array of matching labels
      */
   queryLabels(query_parameters =
-    { label_status: Models.Label.STATUS_OPTIONS.COMPLETED, page_size: 1 }) {
+    { label_status: Label.STATUS_OPTIONS.COMPLETED, page_size: 1 }) {
     // https://docs.shipengine.com/docs/query-labels
 
     return this.labelEngine.queryLabels(query_parameters);
@@ -671,4 +680,6 @@ class ShipEngine {
   }
 }
 
-module.exports = ShipEngine;
+export {
+  ShipEngine
+}; 

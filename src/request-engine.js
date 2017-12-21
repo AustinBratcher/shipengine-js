@@ -1,5 +1,4 @@
-const request = require('request-promise-native'); 
-
+import request from 'request-promise-native';
 
 class RequestEngine {
 
@@ -51,5 +50,6 @@ RequestEngine.HTTPS_METHODS = {
     PATCH :  'PATCH'
 }
 
-
-module.exports = RequestEngine;
+export {
+    RequestEngine
+}; 

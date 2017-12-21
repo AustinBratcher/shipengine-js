@@ -1,9 +1,9 @@
-const RequestEngine = require('../../request-engine'); 
+import { RequestEngine } from '../../request-engine'; 
 
 // Models
 // const Address = require('../../models/address'); 
 
-class AddressFunctions extends RequestEngine {
+class AddressEngine extends RequestEngine {
 
     constructor(api_key = null) {
         super(api_key);
@@ -38,4 +38,6 @@ class AddressFunctions extends RequestEngine {
     }
 }
 
-module.exports = AddressFunctions; 
+export {
+    AddressEngine
+};

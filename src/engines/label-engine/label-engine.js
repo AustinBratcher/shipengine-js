@@ -1,11 +1,11 @@
-const RequestEngine = require('../../request-engine'); 
+import { RequestEngine } from '../../request-engine'; 
 
 // Models
 // const Address = require('../../models/address'); 
-const Label = require('../../models/label'); 
+import { Label } from '../../models/label'; 
 
 
-class LabelFunctions extends RequestEngine{
+class LabelEngine extends RequestEngine{
     
     constructor(api_key = null) {
         super(api_key); 
@@ -133,4 +133,6 @@ class LabelFunctions extends RequestEngine{
     }
 }
 
-module.exports = LabelFunctions; 
+export {
+    LabelEngine
+}

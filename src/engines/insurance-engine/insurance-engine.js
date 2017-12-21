@@ -1,6 +1,6 @@
-const RequestEngine = require('../../request-engine'); 
+import { RequestEngine } from '../../request-engine'; 
 
-class InsuranceFunctions extends RequestEngine{
+class InsuranceEngine extends RequestEngine{
     
     constructor(api_key = null) {
         super(api_key); 
@@ -41,4 +41,6 @@ class InsuranceFunctions extends RequestEngine{
 
 }
 
-module.exports = InsuranceFunctions; 
+export {
+    InsuranceEngine
+}; 

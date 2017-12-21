@@ -1,9 +1,9 @@
-const RequestEngine = require('../../request-engine'); 
+import { RequestEngine } from '../../request-engine'; 
 
 // Models
 // const Label = require('../../models/label'); 
 
-class BatchFunctions extends RequestEngine {
+class BatchEngine extends RequestEngine {
 
     constructor(api_key = null) {
         super(api_key); 
@@ -209,4 +209,6 @@ class BatchFunctions extends RequestEngine {
     }
 }
 
-module.exports = BatchFunctions; 
+export {
+    BatchEngine
+}; 

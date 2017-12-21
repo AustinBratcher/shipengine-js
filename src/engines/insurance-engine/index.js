@@ -1,2 +1,5 @@
-const InsuranceEngine = require('./insurance-engine'); 
-module.exports = InsuranceEngine; 
+import { InsuranceEngine } from './insurance-engine'; 
+
+export {
+    InsuranceEngine
+}; 

@@ -58,5 +58,7 @@ Carrier.TRACKING_STATUS_CODES = {
 //   }
 // }
 
-module.exports = Carrier;
+export {
+  Carrier
+}
 

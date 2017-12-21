@@ -1,2 +1,4 @@
-const AddressEngine = require('./address-engine'); 
-module.exports = AddressEngine; 
+import { AddressEngine } from './address-engine'; 
+export {
+    AddressEngine
+}

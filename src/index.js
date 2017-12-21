@@ -1,18 +1,47 @@
-require('dotenv').config();
+import dotenv from 'dotenv'; 
+dotenv.config(); 
 
 // Base
-const RequestEngine = require('./request-engine');
-const ShipEngine = require('./shipengine');
+import { RequestEngine } from './request-engine'; 
+import { ShipEngine } from './shipengine';
 
 // Models
-const Models = require('./models');
+import {
+  Address, 
+  Batch, 
+  Carrier, 
+  Label, 
+  Package, 
+  Shipment
+} from './models'; 
 
 // API Engines
-const Engines = require('./engines');
+import {
+  AddressEngine, 
+  BatchEngine, 
+  CarrierEngine, 
+  InsuranceEngine, 
+  LabelEngine, 
+  ShipmentEngine, 
+  TrackingEngine, 
+  WarehouseEngine
+} from './engines'; 
 
-module.exports = {
+export {
   RequestEngine,
   ShipEngine,
-  Models,
-  Engines,
+  AddressEngine, 
+  BatchEngine, 
+  CarrierEngine, 
+  InsuranceEngine, 
+  LabelEngine, 
+  ShipmentEngine, 
+  TrackingEngine, 
+  WarehouseEngine,  
+  Address, 
+  Batch, 
+  Carrier, 
+  Label, 
+  Package, 
+  Shipment
 };

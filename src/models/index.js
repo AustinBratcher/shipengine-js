@@ -1,11 +1,11 @@
-const Address = require('./address');
-const Batch = require('./batch');
-const Carrier = require('./carrier');
-const Label = require('./label');
-const Package = require('./package');
-const Shipment = require('./shipment');
+import { Address } from './address'; 
+import { Batch } from './batch';
+import { Carrier } from './carrier'; 
+import { Label } from './label'; 
+import { Package } from './package';
+import { Shipment } from './shipment'; 
 
-module.exports = {
+export {
   Address,
   Batch,
   Carrier,

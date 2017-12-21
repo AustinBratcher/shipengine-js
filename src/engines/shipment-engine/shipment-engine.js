@@ -1,11 +1,11 @@
-const RequestEngine = require('../../request-engine'); 
+import { RequestEngine } from '../../request-engine'; 
 
 // Models
-// const Address = require('../../models/address');
-const Shipment = require('../../models/shipment'); 
+// const Address = require('../../models/address'); 
+import { Shipment } from '../../models/shipment'; 
  
 
-class ShipmentFunctions extends RequestEngine {
+class ShipmentEngine extends RequestEngine {
 
     constructor(api_key = null) {
         super(api_key); 
@@ -234,4 +234,6 @@ class ShipmentFunctions extends RequestEngine {
     }
 }
 
-module.exports = ShipmentFunctions; 
+export {
+    ShipmentEngine
+}; 

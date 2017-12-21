@@ -52,4 +52,6 @@ Address.MESSAGES = {
   a1005: 'The address failed pre-validation.',
 };
 
-module.exports = Address;
+export {
+  Address
+}

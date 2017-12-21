@@ -1,2 +1,4 @@
-const CarrierEngine = require('./carrier-engine'); 
-module.exports = CarrierEngine; 
+import { CarrierEngine } from './carrier-engine'; 
+export {
+    CarrierEngine
+}; 

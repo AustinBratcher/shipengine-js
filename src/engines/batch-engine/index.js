@@ -1,2 +1,4 @@
-const BatchEngine = require('./batch-engine'); 
-module.exports = BatchEngine; 
+import { BatchEngine } from './batch-engine'; 
+export {
+    BatchEngine
+}; 

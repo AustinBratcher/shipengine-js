@@ -1,6 +1,6 @@
-const RequestEngine = require('../../request-engine'); 
+import { RequestEngine } from '../../request-engine'; 
 
-class TrackingFunctions extends RequestEngine {
+class TrackingEngine extends RequestEngine {
 
     constructor(api_key = null) {
         super(api_key); 
@@ -87,4 +87,6 @@ class TrackingFunctions extends RequestEngine {
 
 }
 
-module.exports = TrackingFunctions; 
+export {
+    TrackingEngine
+}

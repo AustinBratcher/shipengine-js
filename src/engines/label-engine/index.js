@@ -1,2 +1,5 @@
-const LabelEngine = require('./label-engine'); 
-module.exports = LabelEngine; 
+import { LabelEngine } from './label-engine';
+
+export {
+    LabelEngine
+}; 

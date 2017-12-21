@@ -24,4 +24,6 @@ Label.STATUS_OPTIONS = {
   VOIDED: 'voided',
 };
 
-module.exports = Label;
+export {
+  Label
+}

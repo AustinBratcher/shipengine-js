@@ -2,6 +2,9 @@
     "extends": "airbnb-base", 
     "rules": {
         "camelcase" : ["off", { "properties": "never" }],
+
+        "import/first": "warn", 
+        "import/prefer-default-export" : "off", 
         
         "max-len": ["error", 100, 2, {
             "ignoreUrls": true,

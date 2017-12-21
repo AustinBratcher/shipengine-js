@@ -17,4 +17,6 @@ Batch.STATUS_OPTIONS = {
   COMPLETED_WITH_ERRORS: 'completed_with_errors',
 };
 
-module.exports = Batch;
+export {
+  Batch
+}

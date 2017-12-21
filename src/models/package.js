@@ -30,4 +30,6 @@ class Package {
   }
 }
 
-module.exports = Package;
+export {
+  Package
+}
