@@ -1,4 +1,4 @@
-var request = require('request-promise-native'); 
+const request = require('request-promise-native'); 
 
 
 class RequestEngine {
@@ -8,7 +8,7 @@ class RequestEngine {
         this.dev_mode = false; 
         
         if(process.env.SHIPENGINE_DEV_MODE 
-                && process.env.SHIPENGINE_DEV_MODE.toLowerCase() == 'true') {
+                && process.env.SHIPENGINE_DEV_MODE.toLowerCase() === 'true') {
             this.dev_mode = true; 
         }
       

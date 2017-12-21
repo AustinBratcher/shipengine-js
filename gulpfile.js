@@ -4,6 +4,7 @@ var babel = require('gulp-babel');
 var jasmine = require('gulp-jasmine'); 
 var del = require('del'); 
 
+
 var paths = {
     src : 'src/**/*.js',
     dest: 'dist'
@@ -26,8 +27,12 @@ gulp.task('watch', () => {
 
 // Clean up source code
 gulp.task('lint', () => {
-    gulp.src(paths.src)
-        .pipe(eslint())
+    return gulp.src(paths.src)
+        .pipe(eslint({
+            useEslintrc: true,
+            configFile: './.eslintrc', 
+            fix: true
+        }))
         .pipe(eslint.format())
         .pipe(eslint.failAfterError())
 }); 
@@ -35,7 +40,7 @@ gulp.task('lint', () => {
 // Transpile source for distribution
 gulp.task('babel', ['clean'], () => {
 
-    gulp.src(paths.scripts)
+    gulp.src(paths.src)
         .pipe(gulp.dest(paths.dest));
     // gulp.src(paths.scripts)
     //     .pipe(bable({

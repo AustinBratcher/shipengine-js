@@ -1,7 +1,7 @@
 const RequestEngine = require('../../request-engine'); 
 
 // Models
-const Address = require('../../models/address'); 
+// const Address = require('../../models/address'); 
 
 class AddressFunctions extends RequestEngine {
 
@@ -20,7 +20,7 @@ class AddressFunctions extends RequestEngine {
 
         let path = 'addresses/validate';
         let body = addresses;  
-        let options = this.generateOptions(path, RequestEngine.HTTPS_METHODS.POST, null, addresses); 
+        let options = this.generateOptions(path, RequestEngine.HTTPS_METHODS.POST, null, body); 
         
         return this.request(options); 
     }

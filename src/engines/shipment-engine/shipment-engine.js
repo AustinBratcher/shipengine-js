@@ -1,7 +1,7 @@
 const RequestEngine = require('../../request-engine'); 
 
 // Models
-const Address = require('../../models/address');
+// const Address = require('../../models/address');
 const Shipment = require('../../models/shipment'); 
  
 
@@ -22,13 +22,13 @@ class ShipmentFunctions extends RequestEngine {
 
         // TODO Evaluate if this step is necessary
         // Properly format shipment objects
-        shipments.forEach((shipment, index) => {
-            shipments[index] = new Shipment(shipment); 
+        let formattedShipments = shipments.map((shipment) => {
+            return new Shipment(shipment); 
         });
 
         let path = 'shipments'; 
         let body = {
-            shipments: shipments
+            shipments: formattedShipments
         }; 
         let options = this.generateOptions(path, RequestEngine.HTTPS_METHODS.POST, null, body); 
 
@@ -57,10 +57,10 @@ class ShipmentFunctions extends RequestEngine {
     updateShipment(shipment) {
         // https://docs.shipengine.com/docs/update-a-shipment
 
-        shipment = new Shipment(shipment); 
+        let formattedShipment = new Shipment(shipment); 
 
         let path = `shipments/${shipment.shipment_id}`; 
-        let body = shipment; 
+        let body = formattedShipment; 
         let options = this.generateOptions(path, RequestEngine.HTTPS_METHODS.PUT, null, body); 
 
         return this.request(options); 

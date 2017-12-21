@@ -56,12 +56,14 @@ class CarrierFunctions extends RequestEngine {
             to_city_locality: shipment.ship_to.city_locality, 
             to_state_province: shipment.ship_to.state_provice, 
             weight: parcel.weight
-        }; 
+        };
 
-        if(shipment.confirmation) 
-            body.confirmation = shipment.confirmation; 
-        else 
-            body.confirmation = Shipment.CONFIRMATION_OPTIONS.NONE; 
+        if(shipment.confirmation) {
+            body.confirmation = shipment.confirmation;
+        }
+        else {
+            body.confirmation = Shipment.CONFIRMATION_OPTIONS.NONE;
+        }
 
         if(shipment.address_residential_indicator) 
             body.address_residential_indicator = shipment.address_residential_indicator;

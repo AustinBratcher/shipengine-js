@@ -1,0 +1,14 @@
+{
+    "extends": "airbnb-base", 
+    "rules": {
+        "camelcase" : ["off", { "properties": "never" }],
+        
+        "max-len": ["error", 100, 2, {
+            "ignoreUrls": true,
+            "ignoreComments": true,
+            "ignoreRegExpLiterals": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true
+        }]
+    }
+}
