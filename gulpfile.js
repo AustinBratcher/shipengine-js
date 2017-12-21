@@ -22,7 +22,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('watch', () => {
-    gulp.watch(path.src, ['default']); 
+    gulp.watch(paths.src, ['default']); 
 })
 
 // Clean up source code
@@ -39,14 +39,9 @@ gulp.task('lint', () => {
 
 // Transpile source for distribution
 gulp.task('babel', ['clean'], () => {
-
     gulp.src(paths.src)
-        .pipe(gulp.dest(paths.dest));
-    // gulp.src(paths.scripts)
-    //     .pipe(bable({
-    //         presets: ['@babel/env']
-    //     }))
-    //     .pipe(gulp.dest('dist')); 
+        .pipe(babel())
+        .pipe(gulp.dest(paths.dest)); 
 });
 
 gulp.task('test', () => {

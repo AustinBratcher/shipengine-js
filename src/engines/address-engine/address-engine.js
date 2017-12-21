@@ -6,7 +6,7 @@ const RequestEngine = require('../../request-engine');
 class AddressFunctions extends RequestEngine {
 
     constructor(api_key = null) {
-        super(api_key); 
+        super(api_key);
     }
 
     /**
