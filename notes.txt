@@ -1,8 +1,6 @@
 Making an node module: 
 https://darrenderidder.github.io/talks/ModulePatterns/#/10
 
-Break into Modules 
-
 add unit tests
 https://jasmine.github.io/2.0/node.html
 
@@ -32,6 +30,9 @@ https://github.com/prettymuchbryce/node-http-status
 Add logging
 https://github.com/winstonjs/winston
 
+
+Break into Scoped Modules
+https://docs.npmjs.com/misc/scope
 
 Make version of objects that Extend promises
 https://github.com/shipstation/shipengine-csharp

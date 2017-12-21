@@ -7,7 +7,8 @@ class RequestEngine {
         this.api_key = api_key ? api_key : process.env.SHIPENGINE_API_KEY; 
         this.dev_mode = false; 
         
-        if(process.env.SHIPENGINE_DEV_MODE && process.env.SHIPENGINE_DEV_MODE == 'true') {
+        if(process.env.SHIPENGINE_DEV_MODE 
+                && process.env.SHIPENGINE_DEV_MODE.toLowerCase() == 'true') {
             this.dev_mode = true; 
         }
       

@@ -1,18 +1,18 @@
-require('dotenv').config(); 
+require('dotenv').config();
 
 // Base
-const RequestEngine = require('./request-engine'); 
+const RequestEngine = require('./request-engine');
 const ShipEngine = require('./shipengine');
 
 // Models
-const Models = require('./models'); 
+const Models = require('./models');
 
 // API Engines
-const Engines = require('./engines'); 
+const Engines = require('./engines');
 
 module.exports = {
-    RequestEngine: RequestEngine,
-    ShipEngine: ShipEngine, 
-    Models: Models, 
-    Engines: Engines
-} 
+  RequestEngine,
+  ShipEngine,
+  Models,
+  Engines,
+};
