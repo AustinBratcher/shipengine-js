@@ -21,14 +21,18 @@ class LabelEngine extends RequestEngine{
      * @param {Package[]} shipment.packages - Array of packages in shipment to create label for (follows Package class format)
      * @param {string} [label_format = null] - The Format the label should be created in (one of Label.FORMAT_OPTIONS)
      * @param {string} [label_layout = null] - The layout the label should be created in (one of Label.LAYOUT_OPTIONS)
+     * @param {Boolean} [is_return_label = false] - Whether the label is a return label. Default is false.
+     * @param {Boolean} [test_label = false] - Whether the label is a test label. Default is false.
      * @returns {Promise} - JS promise wrapped around object describing the label
      */
-    createLabel(shipment, label_format = null, label_layout = null) {
+    createLabel(shipment, label_format = null, label_layout = null, is_return_label = false, test_label = false) {
         // https://docs.shipengine.com/docs/quickstart-create-a-label
 
         let path = 'labels';
         let body = {
-            shipment: shipment
+            shipment: shipment,
+            test_label: test_label,
+            is_return_label: is_return_label
         };
 
         if(label_format) body.label_format = label_format;
@@ -46,13 +50,18 @@ class LabelEngine extends RequestEngine{
      * @param {string} rate_id - Rate id previously created from a shipment
      * @param {string} [label_format = null] - The Format the label should be created in (one of Label.FORMAT_OPTIONS)
      * @param {string} [label_layout = null] - The layout the label should be created in (one of Label.LAYOUT_OPTIONS)
+     * @param {Boolean} [is_return_label = false] - Whether the label is a return label. Default is false.
+     * @param {Boolean} [test_label = false] - Whether the label is a test label. Default is false.
      * @returns {Promise} - JS Promise wrapped around an object containing information about the created label
      */
-    createLabelFromRate(rate_id, label_format = null, label_layout = null) {
+    createLabelFromRate(rate_id, label_format = null, label_layout = null, is_return_label = false, test_label = false) {
         // https://docs.shipengine.com/docs/use-a-rate-to-print-a-label
 
         let path = `labels/rates/${rate_id}`;
-        let body = {}; 
+        let body = {
+            test_label: test_label,
+            is_return_label: is_return_label
+        }; 
 
         if(label_format) body.label_format = label_format;
         if(label_layout) body.label_layout = label_layout;  
@@ -69,13 +78,18 @@ class LabelEngine extends RequestEngine{
      * @param {string} shipment_id - ShipEngine assigned shipment id
      * @param {string} [label_format = null] - The Format the label should be created in (one of Label.FORMAT_OPTIONS)
      * @param {string} [label_layout = null] - The layout the label should be created in (one of Label.LAYOUT_OPTIONS)
+     * @param {Boolean} [is_return_label = false] - Whether the label is a return label. Default is false.
+     * @param {Boolean} [test_label = false] - Whether the label is a test label. Default is false.
      * @returns {Promise} - JS Promise wrapped around an object containing information about the created label
      */
-    createLabelFromShipment(shipment_id, label_format = null, label_layout = null) {
+    createLabelFromShipment(shipment_id, label_format = null, label_layout = null, is_return_label = false, test_label = false) {
         // https://docs.shipengine.com/docs/use-a-shipment-to-print-a-label
         
         let path = `labels/shipment/${shipment_id}`;
-        let body = {};
+        let body = {
+            test_label: test_label,
+            is_return_label: is_return_label
+        };
 
         if(label_format) body.label_format = label_format;
         if(label_layout) body.label_layout = label_layout;  
