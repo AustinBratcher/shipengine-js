@@ -21,6 +21,8 @@ class LabelEngine extends RequestEngine{
      * @param {Package[]} shipment.packages - Array of packages in shipment to create label for (follows Package class format)
      * @param {string} [label_format = null] - The Format the label should be created in (one of Label.FORMAT_OPTIONS)
      * @param {string} [label_layout = null] - The layout the label should be created in (one of Label.LAYOUT_OPTIONS)
+     * @param {Boolean} [is_return_label = false] - Whether the label is a return label. Default is false.
+     * @param {Boolean} [test_label = false] - Whether the label is a test label. Default is false.
      * @returns {Promise} - JS promise wrapped around object describing the label
      */
     createLabel(shipment, label_format = null, label_layout = null, is_return_label = false, test_label = false) {
@@ -48,6 +50,8 @@ class LabelEngine extends RequestEngine{
      * @param {string} rate_id - Rate id previously created from a shipment
      * @param {string} [label_format = null] - The Format the label should be created in (one of Label.FORMAT_OPTIONS)
      * @param {string} [label_layout = null] - The layout the label should be created in (one of Label.LAYOUT_OPTIONS)
+     * @param {Boolean} [is_return_label = false] - Whether the label is a return label. Default is false.
+     * @param {Boolean} [test_label = false] - Whether the label is a test label. Default is false.
      * @returns {Promise} - JS Promise wrapped around an object containing information about the created label
      */
     createLabelFromRate(rate_id, label_format = null, label_layout = null, is_return_label = false, test_label = false) {
@@ -74,6 +78,8 @@ class LabelEngine extends RequestEngine{
      * @param {string} shipment_id - ShipEngine assigned shipment id
      * @param {string} [label_format = null] - The Format the label should be created in (one of Label.FORMAT_OPTIONS)
      * @param {string} [label_layout = null] - The layout the label should be created in (one of Label.LAYOUT_OPTIONS)
+     * @param {Boolean} [is_return_label = false] - Whether the label is a return label. Default is false.
+     * @param {Boolean} [test_label = false] - Whether the label is a test label. Default is false.
      * @returns {Promise} - JS Promise wrapped around an object containing information about the created label
      */
     createLabelFromShipment(shipment_id, label_format = null, label_layout = null, is_return_label = false, test_label = false) {
